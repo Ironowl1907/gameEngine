@@ -1,5 +1,4 @@
+#include "core/logger.h"
 #include "defines.h"
 
-#include <iostream>
-
-EXPORT void sayHello(void) { std::cout << "Hello World" << '\n'; }
+EXPORT void sayHello(void) { WARN("This is a warning with: {}", 45); }

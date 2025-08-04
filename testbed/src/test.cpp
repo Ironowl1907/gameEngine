@@ -1,4 +1,5 @@
 #include <core/logger.h>
+#include <src/main.h>
 
 int main(void) {
   // Initialize logging (handle the bool return value)
@@ -14,6 +15,9 @@ int main(void) {
   DEBUG("Debug message with string: %s", "hello world");
   TRACE("Trace message");
   FATAL("Fatal message - this is critical!");
+
+  sayHello();
+  ASSERT(false)
 
   // Shutdown logging
   Logger::shutdown_logging();
